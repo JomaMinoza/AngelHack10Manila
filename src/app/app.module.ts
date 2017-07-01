@@ -20,6 +20,7 @@ import { StationPage } from '../pages/station/station';
 import { TripPage } from '../pages/trip/trip';
 import { VehiclePage } from '../pages/vehicle/vehicle';
 import { VehicleInfoPage } from '../pages/vehicle-info/vehicle-info';
+import { SplashPage } from '../pages/splash/splash';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { VehicleInfoPage } from '../pages/vehicle-info/vehicle-info';
     StationPage,
     TripPage,
     VehiclePage,
-    VehicleInfoPage  
+    VehicleInfoPage,
+    SplashPage  
   ],
   imports: [
     BrowserModule,
@@ -57,7 +59,8 @@ import { VehicleInfoPage } from '../pages/vehicle-info/vehicle-info';
     StationPage,
     TripPage,
     VehiclePage,
-    VehicleInfoPage    
+    VehicleInfoPage,
+    SplashPage    
   ],
   providers: [
     StatusBar,

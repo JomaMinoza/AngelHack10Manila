@@ -17,12 +17,13 @@ import { StationPage } from '../pages/station/station';
 import { TripPage } from '../pages/trip/trip';
 import { VehiclePage } from '../pages/vehicle/vehicle';
 import { VehicleInfoPage } from '../pages/vehicle-info/vehicle-info';
+import { SplashPage } from '../pages/splash/splash';
 
 @Component({
   templateUrl: 'app.html'
 })
 export class MyApp {
-  rootPage:any = HomePage;
+  rootPage:any = SplashPage;
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
     platform.ready().then(() => {
