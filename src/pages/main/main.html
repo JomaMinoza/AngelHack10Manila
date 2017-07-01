@@ -13,8 +13,41 @@
 </ion-header>
 
 
-<ion-content padding>
-	<button ion-button [navPush]="profilePage">Profile</button>
+<ion-content no-padding>
+  <ion-row>
+    <ion-segment [(ngModel)]="relationship" color="primary">
+      <ion-segment-button value="jeeps" (ionSelect)="selectedFriends()">
+        Jeeps
+      </ion-segment-button>
+      <ion-segment-button value="fxs" (ionSelect)="selectedEnemies()">
+        FX/UVs
+      </ion-segment-button>
+      <ion-segment-button value="buses" (ionSelect)="selectedEnemies()">
+        Bus
+      </ion-segment-button>
+    </ion-segment>
+  </ion-row>
+
+  <ion-card-content>
+    <ion-card>
+      <div class="routes">
+        <div class="from">
+          <ion-icon name="bus" color="primary" float-left padding-right></ion-icon>
+          <h2 margin-bottom>Lawton, Manila</h2>
+        </div>
+
+        <div class="to">
+          <ion-icon name="pin" float-left padding-right></ion-icon>
+          <h2>SM Megamall</h2>
+        </div>
+      </div>
+      <div class="buttons">
+        <button ion-button color="primary" [navPush]="profilePage">Book</button>
+      </div>
+    </ion-card>
+  </ion-card-content>
+
+	<!-- <button ion-button [navPush]="profilePage">Profile</button>
 	<button ion-button [navPush]="vehiclePage">Vehicle</button>
 	<button ion-button [navPush]="vehicleInfoPage">Vehicle Info</button>
 	<button ion-button [navPush]="tripPage">Trip</button>
@@ -22,5 +55,5 @@
 	<button ion-button [navPush]="paymentPage">Payment</button>
 	<button ion-button [navPush]="passengerPage">Passenger</button>
 	<button ion-button [navPush]="stationPage">Station</button>
-	<button ion-button [navPush]="mainPage">Main</button>
+	<button ion-button [navPush]="mainPage">Main</button> -->
 </ion-content>

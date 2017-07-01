@@ -35,6 +35,14 @@ ion-navbar {
   }
 }
 
+ion-segment {
+  background: #fff;
+}
+.segment-md-primary .segment-button {
+  border-color: #fff;
+  color: #10142E;
+}
+
 
 .button {
   margin-bottom: 10px;
@@ -74,7 +82,7 @@ ion-navbar {
 .card {
   padding: 15px;
   margin: 10px 0;
-  box-shadow: none;
+  box-shadow: 0 10px 30px rgba(176,182,218,0.5);
   &.activated {
     box-shadow: 0 5px 30px rgba(176,182,218,1);
   }

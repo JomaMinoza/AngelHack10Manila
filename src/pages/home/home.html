@@ -10,10 +10,9 @@
 </ion-header>
 
 
-<ion-content padding>
-<ion-card-content text-center>
-  <ion-img width="80" height="80" src="https://www.google.com/logos/doodles/2017/canada-national-day-2017-6277144735907840-2xa.gif"></ion-img>
+<ion-content>
   <ion-card-content text-center>
+    <ion-img width="80" height="80" src="https://www.google.com/logos/doodles/2017/canada-national-day-2017-6277144735907840-2xa.gif"></ion-img>
     <ion-item>
       <ion-label color="primary" stacked>First Name</ion-label>
       <ion-input type="text"></ion-input>
@@ -28,9 +27,8 @@
       <ion-label color="primary" stacked>Mobile Number</ion-label>
       <ion-input type="number"></ion-input>
     </ion-item>
-    
+
     <button ion-button block large margin-top color="primary" [navPush]="registrationPage">Register</button>
     <button ion-button clear large color="secondary" [navPush]="loginPage">Login</button>
   </ion-card-content>
-</ion-card-content>
 </ion-content>

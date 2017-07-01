@@ -13,15 +13,70 @@
 </ion-header>
 
 
-<ion-content padding>
- <ion-card-content>
-	<button ion-button [navPush]="profilePage">Profile</button>
+<ion-content>
+  <ion-card-content>
+    <div class="page-title">
+      <h1>Routes</h1>
+      <p class="sub-title">These are your daily routes and stopovers so commuters can find you easily</p>
+    </div>
+  
+  <ion-card>
+    <div class="routes">
+      <div class="from">
+        <ion-icon name="bus" color="primary" float-left padding-right></ion-icon>
+        <h2 margin-bottom>Lawton, Manila</h2>
+      </div>
+
+      <div class="to">
+        <ion-icon name="pin" float-left padding-right></ion-icon>
+        <h2>SM Megamall</h2>
+      </div>
+    </div>
+    <div class="buttons">
+      <ion-row>
+        <ion-col width-50 no-padding>
+          <button ion-button color="light" [navPush]="profilePage">Edit</button>
+        </ion-col>
+        <ion-col width-50 no-padding>
+          <button ion-button color="secondary" [navPush]="profilePage">Start</button>
+        </ion-col>
+      </ion-row>
+    </div>
+  </ion-card>
+
+  <ion-card>
+    <div class="routes">
+      <div class="from">
+        <ion-icon name="bus" color="primary" float-left padding-right></ion-icon>
+        <h2 margin-bottom>LRT Buendia</h2>
+      </div>
+
+      <div class="to">
+        <ion-icon name="pin" float-left padding-right></ion-icon>
+        <h2>Greenfield District</h2>
+      </div>
+    </div>
+    <div class="buttons">
+      <ion-row>
+        <ion-col width-50 no-padding>
+          <button ion-button color="light" [navPush]="profilePage">Edit</button>
+        </ion-col>
+        <ion-col width-50 no-padding>
+          <button ion-button color="secondary" [navPush]="profilePage">Start</button>
+        </ion-col>
+      </ion-row>
+    </div>
+  </ion-card>
+
+  <button ion-button block large margin-top color="primary" [navPush]="registrationPage">Add Route</button>
+
+	<!-- <button ion-button [navPush]="profilePage">Profile</button>
 	<button ion-button [navPush]="vehiclePage">Vehicle</button>
 	<button ion-button [navPush]="vehicleInfoPage">Vehicle Info</button>
 	<button ion-button [navPush]="tripPage">Trip</button>
 	<button ion-button [navPush]="historyPage">History</button>
 	<button ion-button [navPush]="paymentPage">Payment</button>
 	<button ion-button [navPush]="passengerPage">Passenger</button>
-	<button ion-button [navPush]="mainPage">Main</button>
+	<button ion-button [navPush]="mainPage">Main</button> -->
 </ion-card-content>
 </ion-content>

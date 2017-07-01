@@ -13,15 +13,62 @@
 </ion-header>
 
 
-<ion-content padding>
- <ion-card-content>
-	<button ion-button [navPush]="profilePage">Profile</button>
+<ion-content>
+  <ion-card-content>
+    <div class="page-title">
+      <h1>Passengers</h1>
+      <p class="sub-title">This is the list of passengers on your trips</p>
+    </div>
+
+    <p><b>July 1, 2017</b></p>
+    <ion-card margin-bottom>
+      <ion-list>
+        <button ion-item>
+          Jose Rizal
+        </button>  
+        <button ion-item>
+          Maria Clara
+        </button>  
+        <button ion-item>
+          Jose Rizal
+        </button>  
+        <button ion-item>
+          Maria Clara
+        </button>  
+        <button ion-item>
+          Jose Rizal
+        </button>  
+        <button ion-item>
+          Maria Clara
+        </button>  
+        <!-- <button ion-item *ngFor="let item of items" (click)="itemSelected(item)">
+          {{ item }}
+        </button>   -->
+      </ion-list>
+    </ion-card>
+
+    <p margin-top padding-top><b>July 2, 2017</b></p>
+    <ion-card>
+      <ion-list>
+        <button ion-item>
+          Jose Rizal
+        </button>  
+        <button ion-item>
+          Maria Clara
+        </button>  
+        <!-- <button ion-item *ngFor="let item of items" (click)="itemSelected(item)">
+          {{ item }}
+        </button>   -->
+      </ion-list>
+    </ion-card>
+
+	<!-- <button ion-button [navPush]="profilePage">Profile</button>
 	<button ion-button [navPush]="vehiclePage">Vehicle</button>
 	<button ion-button [navPush]="vehicleInfoPage">Vehicle Info</button>
 	<button ion-button [navPush]="tripPage">Trip</button>
 	<button ion-button [navPush]="historyPage">History</button>
 	<button ion-button [navPush]="paymentPage">Payment</button>
 	<button ion-button [navPush]="stationPage">Station</button>
-	<button ion-button [navPush]="mainPage">Main</button>
-</ion-card-content>
+	<button ion-button [navPush]="mainPage">Main</button> -->
+  </ion-card-content>
 </ion-content>
