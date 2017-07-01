@@ -1,6 +1,9 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
+import { MainPage } from '../main/main';
+import { VehiclePage } from '../vehicle/vehicle';
+
 /**
  * Generated class for the RegistrationPage page.
  *
@@ -13,6 +16,8 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'registration.html',
 })
 export class RegistrationPage {
+  mainPage = MainPage;
+  vehiclePage = VehiclePage;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
