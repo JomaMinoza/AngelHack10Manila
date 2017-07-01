@@ -14,3 +14,83 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
+
+h1 {
+  color: #3E51CA;
+}
+
+.content {
+  background: #F8F9FD;
+}
+
+.header,
+.header-md {
+  &::after {
+    background-image: none;
+  }
+}
+ion-navbar {
+  &.toolbar {
+    box-shadow: 0 5px 30px rgba(176,182,218,0.3);
+  }
+}
+
+
+.button {
+  margin-bottom: 10px;
+  text-transform: none;
+}
+.button-md-primary {
+  box-shadow: 0 5px 30px rgba(176,182,218,1);
+  &.activated {
+    box-shadow: 0 5px 30px rgba(176,182,218,1);
+  }
+}
+.button-md-secondary {
+  box-shadow: none;
+}
+
+.btn-clear {
+  background: none;
+  outline: none;
+}
+
+
+.item-md {
+  padding-right: 16px;
+  padding-bottom: 10px;
+}
+
+.page-title {
+  padding: 15px 0 25px;
+  h1 {
+    margin: 0;
+  }
+  .sub-title {
+    color: #A9AFCF;
+    margin: 5px 0;
+  }
+}
+.card {
+  padding: 15px;
+  margin: 10px 0;
+  box-shadow: none;
+  &.activated {
+    box-shadow: 0 5px 30px rgba(176,182,218,1);
+  }
+}
+.avatar {
+  float: left;
+  border-radius: 50%;
+  overflow: hidden;
+  background: #000;
+  margin-right: 10px;
+}
+.text {
+  float: left;
+}
+
+.notes {
+  color: #10142E;
+  font-size: 12px;
+}

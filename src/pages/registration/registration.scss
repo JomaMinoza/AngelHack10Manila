@@ -1,3 +1,27 @@
 page-registration {
+  .card {
+    padding: 0;
+    width: 100%;
+    .text {
+      h2 {
+        font-size: 16px;
+        color: #10142E;
+        display: table-cell;
+        height: 80px;
+        vertical-align: middle;
+      }
+    }
+  }
 
+  .item {
+    &.activated {
+      background: #3E51CA;
+      box-shadow: 0 5px 30px rgba(176,182,218,0.8);
+      .text {
+        h2 {
+          color: #fff;
+        }
+      }
+    }
+  }
 }

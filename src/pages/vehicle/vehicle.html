@@ -15,7 +15,31 @@
 
 <ion-content padding>
 <ion-card-content>
-<button ion-button [navPush]="vehicleInfoPage">Save!</button>
+  <div class="page-title">
+    <h1>Vehicle Information</h1>
+    <p class="sub-title">Pick a vehicle type</p>
+  </div>
+  
+  <ion-row>
+    <ion-item>
+      <ion-label color="primary" stacked>Plate No.</ion-label>
+      <ion-input type="text"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label color="primary" stacked>No. of Passengers</ion-label>
+      <ion-input type="text"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label color="primary" stacked>Color</ion-label>
+      <ion-input type="text"></ion-input>
+    </ion-item>
+  </ion-row>
+
+  <button ion-button block large margin-top color="primary" [navPush]="vehicleInfoPage">Register Vehicle</button>
+
+  <p class="notes">By registering your vehicle, you agree to the <b>Terms and Conditions</b>, <b>Passenger Safety</b>, and <b>Privacy Policy</b> of Commutr.</p>
 </ion-card-content>
 
 </ion-content>

@@ -14,11 +14,45 @@
 
 
 <ion-content padding>
-<ion-card-content>
-<button ion-button [navPush]="mainPage">Register!</button>
-</ion-card-content>
-<ion-card-content>
-<button ion-button [navPush]="vehiclePage">Vehicle</button>
-</ion-card-content>
+  <ion-card-content>
+    <div class="page-title">
+      <h1>Vehicle Information</h1>
+      <p class="sub-title">Pick a vehicle type</p>
+    </div>
+
+    <ion-card>
+      <button ion-item [navPush]="vehiclePage">
+        <div class="avatar">
+          <ion-img width="80" height="80" src="https://www.google.com/logos/doodles/2017/canada-national-day-2017-6277144735907840-2xa.gif"></ion-img>
+        </div>
+        <div class="text">
+          <h2>Jeepney</h2>
+        </div>
+      </button>
+    </ion-card>
+
+    <ion-card>
+      <button ion-item [navPush]="vehiclePage">
+        <div class="avatar">
+          <ion-img width="80" height="80" src="https://www.google.com/logos/doodles/2017/canada-national-day-2017-6277144735907840-2xa.gif"></ion-img>
+        </div>
+        <div class="text">
+          <h2>FX / UV Express</h2>
+        </div>
+      </button>
+    </ion-card>
+
+    <ion-card>
+      <button ion-item [navPush]="vehiclePage">
+        <div class="avatar">
+          <ion-img width="80" height="80" src="https://www.google.com/logos/doodles/2017/canada-national-day-2017-6277144735907840-2xa.gif"></ion-img>
+        </div>
+        <div class="text">
+          <h2>Bus</h2>
+        </div>
+      </button>
+    </ion-card>
+
+  </ion-card-content>
 
 </ion-content>
