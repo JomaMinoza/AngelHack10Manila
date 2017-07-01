@@ -22,6 +22,8 @@ import { VehiclePage } from '../pages/vehicle/vehicle';
 import { VehicleInfoPage } from '../pages/vehicle-info/vehicle-info';
 import { SplashPage } from '../pages/splash/splash';
 
+import { GoogleMaps } from '@ionic-native/google-maps';
+
 @NgModule({
   declarations: [
     MyApp,
@@ -65,6 +67,7 @@ import { SplashPage } from '../pages/splash/splash';
   providers: [
     StatusBar,
     SplashScreen,
+    GoogleMaps,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
