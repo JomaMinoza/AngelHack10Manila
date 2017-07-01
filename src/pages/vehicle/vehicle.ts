@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
-import { VehicleInfoPage } from '../vehicle-info/vehicle-info';
+import { MainPage } from '../main/main';
 
 /**
  * Generated class for the VehiclePage page.
@@ -15,7 +15,7 @@ import { VehicleInfoPage } from '../vehicle-info/vehicle-info';
   templateUrl: 'vehicle.html',
 })
 export class VehiclePage {
-  vehicleInfoPage = VehicleInfoPage;
+  mainPage = MainPage;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }

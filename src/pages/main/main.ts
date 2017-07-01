@@ -81,9 +81,17 @@ export class MainPage {
             console.log('Map is ready!');
         });
  
-    }
+  }
   ionViewDidLoad() {
     console.log('ionViewDidLoad MainPage');
   }
+  selectedJeep(){
 
+  }
+  selectedFX(){
+
+  }
+  selectedBus(){
+
+  }
 }
