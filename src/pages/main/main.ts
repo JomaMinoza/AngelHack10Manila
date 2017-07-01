@@ -13,6 +13,10 @@ import { PaymentPage } from '../payment/payment';
 import { PassengerPage } from '../passenger/passenger';
 import { StationPage } from '../station/station';
 
+import { GoogleMaps, GoogleMap, GoogleMapsEvent, LatLng, CameraPosition } from '@ionic-native/google-maps';
+
+declare var google: any;
+
 /**
  * Generated class for the MainPage page.
  *
@@ -36,10 +40,28 @@ export class MainPage {
   
   passengerPage = PassengerPage;
   stationPage = StationPage;
-
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  
+  constructor(private googleMaps: GoogleMaps, public navCtrl: NavController, public navParams: NavParams) {
   }
+  ngAfterViewInit() {
+    this.loadMap();
+  }
+  loadMap() {
+    let element: HTMLElement = document.getElementById('map');
 
+    let map: GoogleMap = this.googleMaps.create(element);
+    map.one(GoogleMapsEvent.MAP_READY).then(() => console.log('Map is ready!'));
+
+    let ionic: LatLng = new LatLng(43.0741904, -89.3809802);
+
+    let position: CameraPosition = {
+      target: ionic,
+      zoom: 18,
+      tilt: 30
+    };
+
+    map.moveCamera(position);
+  }
   ionViewDidLoad() {
     console.log('ionViewDidLoad MainPage');
   }
