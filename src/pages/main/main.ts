@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, Platform } from 'ionic-angular';
 
 import { VehiclePage } from '../vehicle/vehicle';
 import { VehicleInfoPage } from '../vehicle-info/vehicle-info';
@@ -40,28 +40,48 @@ export class MainPage {
   
   passengerPage = PassengerPage;
   stationPage = StationPage;
-  
-  constructor(private googleMaps: GoogleMaps, public navCtrl: NavController, public navParams: NavParams) {
+
+  map: GoogleMap;
+
+  constructor(private googleMaps: GoogleMaps, public navCtrl: NavController, public navParams: NavParams, public platform: Platform) {
+    platform.ready().then(() => {
+      this.loadMap();
+    });
   }
   ngAfterViewInit() {
     this.loadMap();
   }
-  loadMap() {
-    let element: HTMLElement = document.getElementById('map');
-
-    let map: GoogleMap = this.googleMaps.create(element);
-    map.one(GoogleMapsEvent.MAP_READY).then(() => console.log('Map is ready!'));
-
-    let ionic: LatLng = new LatLng(43.0741904, -89.3809802);
-
-    let position: CameraPosition = {
-      target: ionic,
-      zoom: 18,
-      tilt: 30
-    };
-
-    map.moveCamera(position);
-  }
+  loadMap(){
+ 
+        let location = new LatLng(-34.9290,138.6010);
+ 
+        this.map = new GoogleMap('map', {
+          'backgroundColor': 'white',
+          'controls': {
+            'compass': true,
+            'myLocationButton': true,
+            'indoorPicker': true,
+            'zoom': true
+          },
+          'gestures': {
+            'scroll': true,
+            'tilt': true,
+            'rotate': true,
+            'zoom': true
+          },
+          'camera': {
+            'latLng': location,
+            'tilt': 30,
+            'zoom': 15,
+            'bearing': 50
+          }
+        });
+ 
+        this.map.on(GoogleMapsEvent.MAP_READY).subscribe(() => {
+            console.log('Map is ready!');
+        });
+ 
+    }
   ionViewDidLoad() {
     console.log('ionViewDidLoad MainPage');
   }
