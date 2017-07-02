@@ -4,7 +4,6 @@
   See http://ionicframework.com/docs/components/#navigation for more info on
   Ionic pages and navigation.
 -->
-<script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyB5O26UVOh71FHk66tBl7bj_yPl-Pc7Qi4&sensor=true"></script>
 <ion-header>
 
   <ion-navbar>
@@ -15,7 +14,16 @@
 
 
 <ion-content no-padding>
-  <div id="map"></div>
+  <ion-row>
+    <div class="map">
+      <ion-row padding>
+        <ion-item>
+          <ion-input type="text" placeholder="Where are you going?"></ion-input>
+        </ion-item>
+      </ion-row>
+    </div>
+  </ion-row>
+
   <ion-row>
     <ion-segment [(ngModel)]="relationship" color="primary">
       <ion-segment-button value="jeeps" (ionSelect)="selectedJeep()">
@@ -46,10 +54,57 @@
       <div class="buttons">
         <button ion-button color="primary" [navPush]="tripPage">Book</button>
       </div>
-      <div class="buttons">
-        <button ion-button color="secondary" [navPush]="stationPage">Routes</button>
-      </div>
+    </ion-card>
 
+    <ion-card>
+      <div class="routes">
+        <div class="from">
+          <ion-icon name="bus" color="primary" float-left padding-right></ion-icon>
+          <h2 margin-bottom>Ayala Triangle</h2>
+        </div>
+
+        <div class="to">
+          <ion-icon name="pin" float-left padding-right></ion-icon>
+          <h2>SM Megamall</h2>
+        </div>
+      </div>
+      <div class="buttons">
+        <button ion-button color="primary" [navPush]="tripPage">Book</button>
+      </div>
+    </ion-card>
+
+    <ion-card>
+      <div class="routes">
+        <div class="from">
+          <ion-icon name="bus" color="primary" float-left padding-right></ion-icon>
+          <h2 margin-bottom>Araneta Center Cubao</h2>
+        </div>
+
+        <div class="to">
+          <ion-icon name="pin" float-left padding-right></ion-icon>
+          <h2>SM Fairview</h2>
+        </div>
+      </div>
+      <div class="buttons">
+        <button ion-button color="primary" [navPush]="tripPage">Book</button>
+      </div>
+    </ion-card>
+
+    <ion-card>
+      <div class="routes">
+        <div class="from">
+          <ion-icon name="bus" color="primary" float-left padding-right></ion-icon>
+          <h2 margin-bottom>Greenbelt 1</h2>
+        </div>
+
+        <div class="to">
+          <ion-icon name="pin" float-left padding-right></ion-icon>
+          <h2>Alabang Town Center</h2>
+        </div>
+      </div>
+      <div class="buttons">
+        <button ion-button color="primary" [navPush]="tripPage">Book</button>
+      </div>
     </ion-card>
   </ion-card-content>
 

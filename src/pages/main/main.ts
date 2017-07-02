@@ -13,10 +13,6 @@ import { PaymentPage } from '../payment/payment';
 import { PassengerPage } from '../passenger/passenger';
 import { StationPage } from '../station/station';
 
-import { GoogleMaps, GoogleMap, GoogleMapsEvent, LatLng, CameraPosition } from '@ionic-native/google-maps';
-
-declare var google: any;
-
 /**
  * Generated class for the MainPage page.
  *
@@ -41,47 +37,14 @@ export class MainPage {
   passengerPage = PassengerPage;
   stationPage = StationPage;
 
-  map: GoogleMap;
 
-  constructor(private googleMaps: GoogleMaps, public navCtrl: NavController, public navParams: NavParams, public platform: Platform) {
-    platform.ready().then(() => {
-      this.loadMap();
-    });
+  constructor(public navCtrl: NavController, public navParams: NavParams, public platform: Platform) {
+   
   }
   ngAfterViewInit() {
-    this.loadMap();
+    
   }
-  loadMap(){
- 
-        let location = new LatLng(-34.9290,138.6010);
- 
-        this.map = new GoogleMap('map', {
-          'backgroundColor': 'white',
-          'controls': {
-            'compass': true,
-            'myLocationButton': true,
-            'indoorPicker': true,
-            'zoom': true
-          },
-          'gestures': {
-            'scroll': true,
-            'tilt': true,
-            'rotate': true,
-            'zoom': true
-          },
-          'camera': {
-            'latLng': location,
-            'tilt': 30,
-            'zoom': 15,
-            'bearing': 50
-          }
-        });
- 
-        this.map.on(GoogleMapsEvent.MAP_READY).subscribe(() => {
-            console.log('Map is ready!');
-        });
- 
-  }
+  
   ionViewDidLoad() {
     console.log('ionViewDidLoad MainPage');
   }
