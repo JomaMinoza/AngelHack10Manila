@@ -1,3 +1,9 @@
 page-vehicle {
-
+  .text {
+    h6 {
+      display: table-cell;
+      height: 80px;
+      vertical-align: middle;
+    }
+  }
 }

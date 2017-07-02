@@ -29,10 +29,16 @@ h1 {
     background-image: none;
   }
 }
+
+
 ion-navbar {
   &.toolbar {
     box-shadow: 0 5px 30px rgba(176,182,218,0.3);
   }
+}
+
+ion-img {
+  background: none;
 }
 
 ion-segment {
@@ -91,8 +97,9 @@ ion-segment {
   float: left;
   border-radius: 50%;
   overflow: hidden;
-  background: #000;
   margin-right: 10px;
+  height: 80px;
+  width: 80px;
 }
 .text {
   float: left;
