@@ -4,6 +4,7 @@
   See http://ionicframework.com/docs/components/#navigation for more info on
   Ionic pages and navigation.
 -->
+<script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyB5O26UVOh71FHk66tBl7bj_yPl-Pc7Qi4&sensor=true"></script>
 <ion-header>
 
   <ion-navbar>
@@ -17,13 +18,13 @@
   <div id="map"></div>
   <ion-row>
     <ion-segment [(ngModel)]="relationship" color="primary">
-      <ion-segment-button value="jeeps" (ionSelect)="selectedFriends()">
+      <ion-segment-button value="jeeps" (ionSelect)="selectedJeep()">
         Jeeps
       </ion-segment-button>
-      <ion-segment-button value="fxs" (ionSelect)="selectedEnemies()">
+      <ion-segment-button value="fxs" (ionSelect)="selectedFX()">
         FX/UVs
       </ion-segment-button>
-      <ion-segment-button value="buses" (ionSelect)="selectedEnemies()">
+      <ion-segment-button value="buses" (ionSelect)="selectedBus()">
         Bus
       </ion-segment-button>
     </ion-segment>
@@ -43,8 +44,12 @@
         </div>
       </div>
       <div class="buttons">
-        <button ion-button color="primary" [navPush]="profilePage">Book</button>
+        <button ion-button color="primary" [navPush]="tripPage">Book</button>
       </div>
+      <div class="buttons">
+        <button ion-button color="secondary" [navPush]="stationPage">Routes</button>
+      </div>
+
     </ion-card>
   </ion-card-content>
 

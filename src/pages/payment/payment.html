@@ -14,14 +14,12 @@
 
 
 <ion-content padding>
- <ion-card-content>
-	<button ion-button [navPush]="profilePage">Profile</button>
-	<button ion-button [navPush]="vehiclePage">Vehicle</button>
-	<button ion-button [navPush]="vehicleInfoPage">Vehicle Info</button>
-	<button ion-button [navPush]="tripPage">Trip</button>
-	<button ion-button [navPush]="historyPage">History</button>
-	<button ion-button [navPush]="passengerPage">Passenger</button>
-	<button ion-button [navPush]="stationPage">Station</button>
-	<button ion-button [navPush]="mainPage">Main</button>
-</ion-card-content>
+  <div class="page-title">
+    <h1>Payment</h1>
+    <p class="sub-title">Choose Payment Method</p>
+  </div>
+
+  <button ion-button block large margin-top color="primary" [navPush]="mainPage">Through Cash</button>
+  <button ion-button block large margin-top color="primary" [navPush]="mainPage">Pay through PayMaya!</button>
+
 </ion-content>

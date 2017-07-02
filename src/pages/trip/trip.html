@@ -16,14 +16,31 @@
 <ion-content padding>
 
  <ion-card-content>
-	<button ion-button [navPush]="profilePage">Profile</button>
-	<button ion-button [navPush]="vehiclePage">Vehicle</button>
-	<button ion-button [navPush]="vehicleInfoPage">Vehicle Info</button>
-	<button ion-button [navPush]="historyPage">History</button>
-	<button ion-button [navPush]="paymentPage">Payment</button>
-	<button ion-button [navPush]="passengerPage">Passenger</button>
-	<button ion-button [navPush]="stationPage">Station</button>
-	<button ion-button [navPush]="mainPage">Main</button>
+  <div class="page-title">
+    <h1>Trip</h1>
+    <p class="sub-title">Put in your trip details</p>
+  </div>
+  
+  <ion-row>
+    <ion-item>
+      <ion-label color="primary" stacked>To:</ion-label>
+      <ion-input type="text"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label color="primary" stacked>From:</ion-label>
+      <ion-input type="text"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label color="primary" stacked>Date:</ion-label>
+      <ion-input type="text"></ion-input>
+    </ion-item>
+  </ion-row>
+
+  <button ion-button block large margin-top color="primary" [navPush]="paymentPage">Commute!</button>
+
 </ion-card-content>
+	
 
 </ion-content>
