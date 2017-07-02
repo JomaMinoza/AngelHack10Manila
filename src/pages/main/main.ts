@@ -85,13 +85,4 @@ export class MainPage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad MainPage');
   }
-  selectedJeep(){
-
-  }
-  selectedFX(){
-
-  }
-  selectedBus(){
-
-  }
 }
